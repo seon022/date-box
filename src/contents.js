@@ -1,6 +1,6 @@
 import counters from './counters';
 
-export const ENDING = '🤖 by [date-box](https://github.com/kf-liu/date-box)';
+export const ENDING = '🤖 by [date-box]';
 
 const formatDiffDay = (absDiff, maxLength) => {
     let diffStr = absDiff.toString();
@@ -11,7 +11,7 @@ const formatDiffDay = (absDiff, maxLength) => {
 const getContent = ({ absDiff, negative, event = '' }, { maxLength }) =>
     absDiff === 0
         ? `🎁🎁🎁 Today is ${event}`
-        : `🗓 ${formatDiffDay(absDiff, maxLength)} ${absDiff === 1 ? 'day ' : 'days'} ${negative ? 'after ' : 'before'} ${event}`;
+        : `📆 ${formatDiffDay(absDiff, maxLength)} ${absDiff === 1 ? 'day ' : 'days'} ${negative ? 'after ' : 'before'} ${event}`;
 
 export default (records) => {
     const newContents = counters(records);
