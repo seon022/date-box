@@ -11,7 +11,7 @@ const formatDiffDay = (absDiff, maxLength) => {
 const getContent = ({ absDiff, negative, event = '' }, { maxLength }) =>
     absDiff === 0
         ? `🎁🎁🎁 Today is ${event}`
-        : `📆 ${formatDiffDay(absDiff, maxLength)} ${absDiff === 1 ? 'day ' : 'days'} ${negative ? 'after ' : 'before'} ${event}`;
+        : `🗓️ ${formatDiffDay(absDiff, maxLength)} ${absDiff === 1 ? 'day ' : 'days'} ${negative ? 'after ' : 'before'} ${event}`;
 
 export default (records) => {
     const newContents = counters(records);
