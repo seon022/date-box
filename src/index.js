@@ -40,7 +40,7 @@ export const main = async () => {
             gist_id: gistId,
             files: {
                 [filename]: {
-                    filename: `🗓 my date box`,
+                    filename: `🗓️ my date box`,
                     content: newContents,
                 }
             }
